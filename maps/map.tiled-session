@@ -1,0 +1,43 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "map.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "dungeontileset-extended.tsx": {
+            "scaleInDock": 0.33,
+            "scaleInEditor": 1
+        },
+        "map.tmx": {
+            "scale": 0.0625,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 2624,
+                "y": 2776
+            }
+        }
+    },
+    "last.imagePath": "C:\Users\diogo\Documents\Dungeon Escape\maps",
+    "map.height": 60,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 64,
+    "map.tileWidth": 64,
+    "map.width": 120,
+    "openFiles": [
+        "dungeontileset-extended.tsx",
+        "map.tmx"
+    ],
+    "project": "map.tiled-project",
+    "recentFiles": [
+        "dungeontileset-extended.tsx",
+        "map.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 64,
+        "width": 64
+    }
+}
