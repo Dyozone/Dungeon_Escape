@@ -43,8 +43,8 @@ while 1:
 
         player.draw(camera)
         player.check_state()
-        player.use_light_source()
         player.use_weapon()
+        player.use_light_source()
 
         player.draw_lives()
         player.draw_oil()

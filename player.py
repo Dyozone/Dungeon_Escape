@@ -1,5 +1,6 @@
 from character import *
 from pygame.math import Vector2
+from math import atan2, degrees, pi
 
 
 class Player(Character):
@@ -52,7 +53,7 @@ class Player(Character):
 
     def get_event(self):
         keys = pygame.key.get_pressed()
-        is_press = any(keys)
+        pressing_keys = any(keys)
         if keys[pygame.K_w]:
             self.v = (0, -5)
             self.move(self.v)
@@ -65,7 +66,7 @@ class Player(Character):
         if keys[pygame.K_d]:
             self.v = (+5, 0)
             self.move(self.v)
-        if is_press is False:
+        if not pressing_keys:
             self.v = (0, 0)
 
     def escapes(self):
@@ -82,7 +83,7 @@ class Player(Character):
             self.light_frame %= 70
             screen.blit(pygame.transform.scale_by(Skins.LIBRARY['item_lamp_' + str(self.light_frame // 10)], 0.4),
                         (screen.get_rect().centerx - self.rect.width + 50,
-                            screen.get_rect().centery - self.rect.height / 3))
+                         screen.get_rect().centery - self.rect.height / 3))
             if not self.collecting_oil:
                 self.oil -= 1
         self.light_circle.fill(0)
@@ -92,9 +93,15 @@ class Player(Character):
         screen.blit(self.light_circle, screen.get_rect())
 
     def use_weapon(self):
-        screen.blit(pygame.transform.scale_by(Skins.LIBRARY['item_weapon_bow_2'], 4),
+        """angle = math.degrees(math.atan2(pygame.mouse.get_pos() - Skins.LIBRARY['item_weapon_bow_2'].get_rect()))
+        rotated_object = pygame.transform.rotate(object_image, -angle)
+        rotated_rect = rotated_object.get_rect(center=object_rect.center)
+
+        """
+        """screen.blit(pygame.transform.scale_by(Skins.LIBRARY['item_weapon_bow_2'], 4),
                     (screen.get_rect().centerx - self.rect.width + 125,
-                     screen.get_rect().centery - self.rect.height / 6))
+                     screen.get_rect().centery - self.rect.height / 6))"""
+
     def search_oil(self, puddles):
         found_oil = self.collision_test(self.rect, puddles)
         if not found_oil:
