@@ -4,4 +4,4 @@ Objetivos do Jogo: Navegar por uma caverna escura recorrendo a fontes de luz ali
 
 Os menus existentes são o de início, Pausa, e Game Over e os elementos de GUI são as vidas e óleo.
 
-![GIF of some gameplay of the current version of Dungeon Escape.]([https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/Dyozone/Dungeon_Escape/blob/0096239dc778a13ce6d44cae87cfddad5ed2eddc/DE_Demo_13-09.gif))
+![GIF of some gameplay of the current version of Dungeon Escape.]([https://github.com/Dyozone/Dungeon_Escape/blob/0096239dc778a13ce6d44cae87cfddad5ed2eddc/DE_Demo_13-09.gif])
