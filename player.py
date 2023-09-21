@@ -1,6 +1,8 @@
+import math
+
 from character import *
 from pygame.math import Vector2
-from math import atan2, degrees, pi
+from math import atan2, acos, degrees, pi
 
 
 class Player(Character):
@@ -92,16 +94,6 @@ class Player(Character):
                            radius=self.oil * 0.3)
         screen.blit(self.light_circle, screen.get_rect())
 
-    def use_weapon(self):
-        """angle = math.degrees(math.atan2(pygame.mouse.get_pos() - Skins.LIBRARY['item_weapon_bow_2'].get_rect()))
-        rotated_object = pygame.transform.rotate(object_image, -angle)
-        rotated_rect = rotated_object.get_rect(center=object_rect.center)
-
-        """
-        """screen.blit(pygame.transform.scale_by(Skins.LIBRARY['item_weapon_bow_2'], 4),
-                    (screen.get_rect().centerx - self.rect.width + 125,
-                     screen.get_rect().centery - self.rect.height / 6))"""
-
     def search_oil(self, puddles):
         found_oil = self.collision_test(self.rect, puddles)
         if not found_oil:
@@ -121,3 +113,13 @@ class Player(Character):
                     self.oil += 10
                 else:
                     self.oil = self.oil_capacity
+
+    """    def use_weapon(self):
+            weapon_y = screen.get_rect().centery - self.rect.height / 6
+            weapon_x = screen.get_rect().centerx - self.rect.width + 125
+            rotated_weapon = pygame.transform.rotate(Skins.LIBRARY['item_weapon_bow_2'], degrees(acos(((abs(pygame.mouse.get_pos()[0] - (screen.get_rect().centerx - self.rect.width + 50))/(math.sqrt(
+                (abs(pygame.mouse.get_pos()[0] - (screen.get_rect().centerx - self.rect.width + 50))**2) + (abs(pygame.mouse.get_pos()[1] - (screen.get_rect().centery - self.rect.height / 3))**2)
+            )))))))
+            screen.blit(pygame.transform.scale_by(rotated_weapon, 4), (weapon_x,weapon_y))"""
+
+
